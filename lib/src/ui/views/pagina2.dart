@@ -24,10 +24,11 @@ class _Pagina2State extends State<Pagina2> {
   @override
   Widget build(BuildContext context) {
     return Container(
+        
         padding: const EdgeInsets.all(20),
         child: Form(
             key: _formularioEstado,
-              child: Column(
+              child: ListView(
                 children: [
                   //CAMPO APELLIDO 1
                   Container(
@@ -102,6 +103,9 @@ class _Pagina2State extends State<Pagina2> {
                   ),
                   Container(
                     padding: EdgeInsets.all(5),
+                    child: const Center(
+                      child: Icon(Icons.phone),
+                    ),
                   ),
                   //TELEFONO DE CONTACTO
                   Container(

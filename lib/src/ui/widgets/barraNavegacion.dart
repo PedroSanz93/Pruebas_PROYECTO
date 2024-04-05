@@ -39,11 +39,12 @@ class barraNavegacion extends StatelessWidget {
           ),
         ),
       drawer: const BarraLateral(),
+      backgroundColor: const Color.fromARGB(137, 157, 253, 225),
       body: const TabBarView(
             children: [
               Pagina1(),
               Pagina2(),
-              Text("Contenido de la pagina 3")
+              Pagina3()
           ],
         ),
       
