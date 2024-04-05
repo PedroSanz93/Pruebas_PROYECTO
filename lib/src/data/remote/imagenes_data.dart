@@ -62,6 +62,4 @@ List<ImageData> images = [
     "Descripción de la tercera imagen",
     "https://www.google.es/maps/place/Mezquita-Catedral+de+C%C3%B3rdoba/@37.8789056,-4.7819565,16z/data=!4m15!1m8!3m7!1s0xd6d2082ce1a16cf:0xefebc353f81bf636!2sMezquita-Catedral+de+C%C3%B3rdoba!8m2!3d37.8789056!4d-4.7793869!10e1!16zL20vMDNjYmtf!3m5!1s0xd6d2082ce1a16cf:0xefebc353f81bf636!8m2!3d37.8789056!4d-4.7793869!16zL20vMDNjYmtf?entry=ttu",
   ),
-
-  // Agrega más objetos ImageData para las otras imágenes
 ];

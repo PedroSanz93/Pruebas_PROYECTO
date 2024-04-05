@@ -78,7 +78,7 @@ class _Pagina1State extends State<Pagina1> {
               
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text('Aquí puedes mostrar el mapa de Google Maps'),
+                Text('Aqui para mostrar el mapa de Google Maps'),
                 SizedBox(height: 20),
                 ElevatedButton(
                   onPressed: () {

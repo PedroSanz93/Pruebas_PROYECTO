@@ -29,7 +29,6 @@ class BarraLateral extends StatelessWidget {
             ),
             GestureDetector(
               onTap: () {
-                // Navegar a la página de inicio
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => HomeScreen()),
@@ -45,10 +44,9 @@ class BarraLateral extends StatelessWidget {
             ),
             GestureDetector(
               onTap: () {
-                // Navegar a la página de usuario
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => UserScreen()), // Reemplaza UserScreen con el nombre de tu pantalla de usuario
+                  MaterialPageRoute(builder: (context) => UserScreen()), 
                 );
               },
               child: Container(
@@ -61,7 +59,6 @@ class BarraLateral extends StatelessWidget {
             ),
             GestureDetector(
               onTap: () {
-                // Navegar a la página de inicio
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => ImagenesScreen()),
@@ -77,10 +74,9 @@ class BarraLateral extends StatelessWidget {
             ),
             GestureDetector(
               onTap: () {
-                // Navegar a la página de configuración
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => SettingScreen()), // Reemplaza SettingScreen con el nombre de tu pantalla de configuración
+                  MaterialPageRoute(builder: (context) => SettingScreen()),
                 );
               },
               child: Container(
@@ -95,7 +91,6 @@ class BarraLateral extends StatelessWidget {
             ),
             GestureDetector(
               onTap: () {
-                // Acción al hacer clic en Salir
               },
               child: Container(
                 margin: const EdgeInsets.only(top: 2),

@@ -42,7 +42,7 @@ class barraNavegacion extends StatelessWidget {
       body: const TabBarView(
             children: [
               Pagina1(),
-              Text("Contenido de la pagina 2"),
+              Pagina2(),
               Text("Contenido de la pagina 3")
           ],
         ),

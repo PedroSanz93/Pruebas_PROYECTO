@@ -11,7 +11,7 @@ class _Pagina3State extends State<Pagina3> {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Text("PAGINA 3"),
+      child: Text("Aqui va la conexion con la API"),
     );
   }
 }
