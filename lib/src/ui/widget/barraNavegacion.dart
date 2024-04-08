@@ -1,5 +1,5 @@
 import 'package:aplicacion_basica_curso/src/config/import.dart';
-import 'package:aplicacion_basica_curso/src/ui/widgets/global/barraLateral.dart';
+import 'package:aplicacion_basica_curso/src/ui/widget/global/barraLateral.dart';
 import 'package:flutter/material.dart';
 
 class barraNavegacion extends StatelessWidget {

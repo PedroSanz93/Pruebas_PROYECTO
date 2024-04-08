@@ -1,6 +1,6 @@
 import 'package:aplicacion_basica_curso/src/data/remote/services/movies_Services.dart';
-import 'package:aplicacion_basica_curso/src/ui/widgets/cajaPelicula.dart';
-import 'package:aplicacion_basica_curso/src/ui/widgets/spinnerWidget.dart';
+import 'package:aplicacion_basica_curso/src/ui/widget/cajaPelicula.dart';
+import 'package:aplicacion_basica_curso/src/ui/widget/spinnerWidget.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 

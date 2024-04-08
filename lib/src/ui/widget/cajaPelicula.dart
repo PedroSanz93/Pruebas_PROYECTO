@@ -1,5 +1,5 @@
 import 'package:aplicacion_basica_curso/src/data/remote/movie.dart';
-import 'package:aplicacion_basica_curso/src/ui/widgets/pelicula.dart';
+import 'package:aplicacion_basica_curso/src/ui/widget/pelicula.dart';
 import 'package:flutter/material.dart';
 
 

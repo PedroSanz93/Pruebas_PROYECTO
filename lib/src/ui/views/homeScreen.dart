@@ -1,4 +1,4 @@
-import 'package:aplicacion_basica_curso/src/ui/widgets/barraNavegacion.dart';
+import 'package:aplicacion_basica_curso/src/ui/widget/barraNavegacion.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
