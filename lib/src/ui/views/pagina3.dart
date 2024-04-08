@@ -1,54 +1,48 @@
-import 'dart:convert';
+import 'package:aplicacion_basica_curso/src/data/remote/services/movies_Services.dart';
+import 'package:aplicacion_basica_curso/src/ui/widgets/cajaPelicula.dart';
+import 'package:aplicacion_basica_curso/src/ui/widgets/spinnerWidget.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
-class Pagina3 extends StatefulWidget {
-  const Pagina3({Key? key}) : super(key: key);
 
-  @override
-  State<Pagina3> createState() => _Pagina3State();
-}
-
-class _Pagina3State extends State<Pagina3> {
-  List<dynamic> _data = [];
-
-  // Método para realizar la solicitud HTTP a la API
-  Future<void> fetchData() async {
-    final response = await http.get(Uri.parse('https://jsonplaceholder.typicode.com/posts'));
-
-    if (response.statusCode == 200) {
-      setState(() {
-        _data = json.decode(response.body);
-      });
-    } else {
-      print('Error en la solicitud: ${response.statusCode}');
-    }
-  }
+class Pagina3 extends StatelessWidget {
+  const Pagina3({super.key});
 
   @override
   Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: "API Movie",
+      home: MovieDBPage(
+        
+      ),);
+  }
+}
+
+class MovieDBPage extends StatelessWidget {
+  final TheMovieDBService _movieService = TheMovieDBService();
+  @override
+  Widget build(BuildContext context){
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Pagina 3 - Ejemplo de conexión a API'),
-      ),
-      body: _data.isEmpty
-          ? Center(
-              child: ElevatedButton(
-                onPressed: () {
-                  fetchData();
-                },
-                child: const Text('Cargar datos desde la API'),
-              ),
-            )
-          : ListView.builder(
-              itemCount: _data.length,
-              itemBuilder: (context, index) {
-                return ListTile(
-                  title: Text(_data[index]['title'] ?? ''),
-                  subtitle: Text(_data[index]['body'] ?? ''),
+      body: FutureBuilder(
+        future: _movieService.getTopRatedMovies(),
+        builder: 
+        (BuildContext context,
+          AsyncSnapshot<List> snapshot){
+            if(snapshot.hasData){
+              return ListView.builder(
+                itemCount: snapshot.data!.length,
+                itemBuilder: (context, index){
+                  var pelicula = snapshot.data![index];
+                  return CajaPelicula(peli: pelicula);
+                  },
                 );
-              },
-            ),
+            } else {
+              return SpinnerWidget();
+            }
+          }
+      )
     );
   }
+
 }
